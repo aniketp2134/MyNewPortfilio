@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rutik Bajirao Patil | Java Full Stack Developer</title>
+  <meta name="description" content="Java Full Stack Developer specializing in Spring Boot, ReactJS, and RESTful APIs." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>RBP<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">
+        <span class="tag-dot"></span> Available for opportunities
+      </div>
+      <h1 class="hero-name reveal-up">
+        Rutik<br /><span class="name-accent">Bajirao Patil</span>
+      </h1>
+      <div class="hero-title reveal-up">
+        <span class="title-static">Java Full Stack</span>
+        <span class="title-separator"> · </span>
+        <span class="typed-wrapper"><span id="typedText"></span><span class="typed-cursor">|</span></span>
+      </div>
+      <p class="hero-summary reveal-up">
+        Building scalable full-stack systems with <em>Spring Boot</em>, <em>ReactJS</em> &amp; <em>MySQL</em> —
+        from RESTful APIs to containerized microservices.
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-code-branch"></i> View Projects
+        </a>
+        <a href="Resume.pdf" class="btn btn-outline" id="downloadResume">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+      <div class="hero-stats reveal-up">
+        <div class="stat-item">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">Internships</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-window reveal-right">
+        <div class="window-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="window-title">RutikPatil.java</span>
+        </div>
+        <pre class="code-block"><code><span class="c-keyword">public class</span> <span class="c-class">RutikPatil</span> {
+
+  <span class="c-keyword">private final</span> String role =
+    <span class="c-string">"Java Full Stack Dev"</span>;
+
+  <span class="c-keyword">private</span> List&lt;String&gt; stack = List.of(
+    <span class="c-string">"Spring Boot"</span>,
+    <span class="c-string">"React.js"</span>,
+    <span class="c-string">"MySQL"</span>,
+    <span class="c-string">"Docker"</span>,
+    <span class="c-string">"Microservices"</span>
+  );
+
+  <span class="c-keyword">public</span> String passion() {
+    <span class="c-keyword">return</span> <span class="c-string">"Build. Ship. Scale."</span>;
+  }
+}</code></pre>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="about-lead">
+            Computer Engineering graduate with a strong foundation in enterprise Java and modern full-stack development.
+          </p>
+          <p class="about-body">
+            I specialize in building production-grade applications using <strong>Java 8/11/17</strong>, <strong>Spring Boot</strong>,
+            and <strong>ReactJS</strong>. My experience spans RESTful API design, JWT authentication, database modeling with MySQL/MongoDB,
+            and containerization with Docker.
+          </p>
+          <p class="about-body">
+            Passionate about clean architecture, scalable microservices, and bridging the gap between backend logic and
+            intuitive frontend experiences.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Pune, Maharashtra, India</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Computer Engineering Graduate</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Open to Full-Time Roles</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-code"></i>
+              <span>Java · Spring Boot · React · Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-cards reveal-right">
+          <div class="about-card glass">
+            <i class="fas fa-server card-icon"></i>
+            <h3>Backend Expertise</h3>
+            <p>Spring Boot, REST APIs, JWT, Hibernate, Microservices architecture with JPA/ORM.</p>
+          </div>
+          <div class="about-card glass">
+            <i class="fas fa-laptop-code card-icon"></i>
+            <h3>Frontend Skills</h3>
+            <p>React.js, JavaScript ES6+, HTML5/CSS3 — building responsive, accessible UIs.</p>
+          </div>
+          <div class="about-card glass">
+            <i class="fas fa-cloud card-icon"></i>
+            <h3>DevOps & Cloud</h3>
+            <p>Docker containers, CI/CD pipelines, Git workflows, Linux environment, Oracle Cloud.</p>
+          </div>
+          <div class="about-card glass">
+            <i class="fas fa-brain card-icon"></i>
+            <h3>AI / ML Exposure</h3>
+            <p>Face recognition, object detection with OpenCV & TensorFlow, model optimization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+      </div>
+      <div class="skills-wrapper">
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Java 8/11/17</span>
+            <span class="skill-tag tier-1">JavaScript</span>
+            <span class="skill-tag tier-2">Python</span>
+            <span class="skill-tag tier-2">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Spring Boot</span>
+            <span class="skill-tag tier-1">Spring MVC</span>
+            <span class="skill-tag tier-1">Hibernate</span>
+            <span class="skill-tag tier-2">J2EE</span>
+            <span class="skill-tag tier-2">Servlets</span>
+            <span class="skill-tag tier-2">JSP</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fas fa-palette"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">React.js</span>
+            <span class="skill-tag tier-1">HTML5</span>
+            <span class="skill-tag tier-1">CSS3</span>
+            <span class="skill-tag tier-2">JSF</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fas fa-database"></i> Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">MySQL</span>
+            <span class="skill-tag tier-2">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fab fa-docker"></i> DevOps & Cloud</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Docker</span>
+            <span class="skill-tag tier-1">Git / GitHub</span>
+            <span class="skill-tag tier-2">CI/CD</span>
+            <span class="skill-tag tier-2">Linux</span>
+            <span class="skill-tag tier-2">Cloud Basics</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fas fa-lightbulb"></i> Concepts</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">REST APIs</span>
+            <span class="skill-tag tier-1">Microservices</span>
+            <span class="skill-tag tier-1">OOP</span>
+            <span class="skill-tag tier-2">Agile Scrum</span>
+            <span class="skill-tag tier-2">Multithreading</span>
+            <span class="skill-tag tier-2">Collections</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Proficiency bars -->
+      <div class="proficiency-bars reveal-up">
+        <h3 class="prof-title">Core Proficiency</h3>
+        <div class="bar-list">
+          <div class="bar-item">
+            <div class="bar-meta"><span>Java (Spring Boot)</span><span>90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>React.js / JavaScript</span><span>78%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>MySQL / Hibernate</span><span>82%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>Docker / DevOps</span><span>65%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>Python / AI/ML</span><span>60%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03 / Experience</span>
+        <h2 class="section-title">Work History</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card glass">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Java Full Stack Developer Intern</h3>
+                <p class="tl-company"><i class="fas fa-building"></i> Profound Edutech Pvt. Ltd., Pune</p>
+              </div>
+              <span class="tl-period">Aug 2025 – Present</span>
+            </div>
+            <div class="tl-badge current">Current</div>
+            <ul class="tl-points">
+              <li>Developed full-stack applications using Java, Spring Boot, ReactJS &amp; MySQL</li>
+              <li>Built RESTful APIs for CRUD operations consumed by the React frontend</li>
+              <li>Implemented JWT-based authentication for secure API access</li>
+              <li>Integrated frontend and backend modules into a cohesive release pipeline</li>
+              <li>Managed codebase via Git/GitHub; tested APIs using Postman</li>
+            </ul>
+            <div class="tl-tech">
+              <span>Java</span><span>Spring Boot</span><span>ReactJS</span><span>MySQL</span><span>JWT</span><span>Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-marker">
+            <div class="marker-ring"></div>
+            <div class="marker-dot"></div>
+          </div>
+          <div class="timeline-card glass">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Artificial Intelligence Intern</h3>
+                <p class="tl-company"><i class="fas fa-building"></i> AI Research Internship</p>
+              </div>
+              <span class="tl-period">Feb 2024 – Apr 2024</span>
+            </div>
+            <ul class="tl-points">
+              <li>Built face recognition and object detection pipelines using OpenCV &amp; TensorFlow</li>
+              <li>Improved model accuracy through advanced image preprocessing techniques</li>
+              <li>Documented model performance benchmarks and presented findings</li>
+            </ul>
+            <div class="tl-tech">
+              <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>ML</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04 / Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="filter-bar reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card glass reveal-up" data-category="fullstack">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-users-cog"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Employee Management System</h3>
+          <p class="project-desc">
+            Full-stack HRMS featuring employee CRUD, department management, role-based access control with JWT,
+            and a clean React dashboard backed by a Spring Boot REST API.
+          </p>
+          <div class="project-tech">
+            <span>Java</span><span>Spring Boot</span><span>ReactJS</span><span>MySQL</span><span>JWT</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> CRUD REST APIs</span>
+            <span><i class="fas fa-check-circle"></i> JWT Auth</span>
+            <span><i class="fas fa-check-circle"></i> Responsive UI</span>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal-up" data-category="fullstack ai">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Voice Chatbot</h3>
+          <p class="project-desc">
+            Conversational AI chatbot with voice-to-text input and text-to-speech output, integrated via REST APIs,
+            and containerized with Docker for seamless deployment.
+          </p>
+          <div class="project-tech">
+            <span>REST API</span><span>Voice-to-Text</span><span>Docker</span><span>TTS</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> Docker Deploy</span>
+            <span><i class="fas fa-check-circle"></i> Voice I/O</span>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal-up" data-category="frontend">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">To-Do List Web Application</h3>
+          <p class="project-desc">
+            Dynamic task manager with real-time CRUD, priority flags, due-date tracking, and a fluid UI built
+            with vanilla JavaScript and REST API integration.
+          </p>
+          <div class="project-tech">
+            <span>JavaScript</span><span>HTML/CSS</span><span>REST API</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> Dynamic UI</span>
+            <span><i class="fas fa-check-circle"></i> REST Integration</span>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal-up" data-category="ai">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-camera"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Face Verification System</h3>
+          <p class="project-desc">
+            Real-time face verification pipeline using OpenCV for detection and TensorFlow for identity verification,
+            with preprocessing to maximize model accuracy.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>Image Processing</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-check-circle"></i> Real-time Detection</span>
+            <span><i class="fas fa-check-circle"></i> High Accuracy</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="section certifications" id="certifications">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">05 / Certifications</span>
+        <h2 class="section-title">Credentials</h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card glass reveal-up">
+          <div class="cert-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="cert-body">
+            <h3>Master Diploma in Java Full Stack Development</h3>
+            <p>Comprehensive coverage of Java EE, Spring ecosystem, ReactJS, and DevOps fundamentals.</p>
+          </div>
+          <div class="cert-badge">Diploma</div>
+        </div>
+
+        <div class="cert-card glass reveal-up">
+          <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+          <div class="cert-body">
+            <h3>Oracle Cloud Infrastructure 2025</h3>
+            <p>DevOps Professional — CI/CD, container orchestration, and cloud infrastructure automation.</p>
+          </div>
+          <div class="cert-badge oracle">Oracle</div>
+        </div>
+
+        <div class="cert-card glass reveal-up">
+          <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="cert-body">
+            <h3>Oracle Cloud Infrastructure 2025</h3>
+            <p>Data Science Professional — ML workflows, model deployment, and data engineering on OCI.</p>
+          </div>
+          <div class="cert-badge oracle">Oracle</div>
+        </div>
+
+        <div class="cert-card glass reveal-up">
+          <div class="cert-icon"><i class="fas fa-robot"></i></div>
+          <div class="cert-body">
+            <h3>Oracle AI Foundations Associate</h3>
+            <p>Fundamentals of AI/ML on Oracle Cloud — LLMs, generative AI, and responsible AI principles.</p>
+          </div>
+          <div class="cert-badge oracle">Oracle</div>
+        </div>
+
+        <div class="cert-card glass reveal-up">
+          <div class="cert-icon"><i class="fab fa-git-alt"></i></div>
+          <div class="cert-body">
+            <h3>Git &amp; GitHub Masterclass</h3>
+            <p>Advanced version control, branching strategies, pull requests, and collaborative workflows.</p>
+          </div>
+          <div class="cert-badge">Masterclass</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">06 / Contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+      </div>
+      <div class="contact-wrapper">
+
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">
+            I'm actively looking for full-time Java Full Stack Developer roles. Feel free to reach out — I respond promptly!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:rutikp2134@gmail.com" class="contact-link glass">
+              <div class="cl-icon"><i class="fas fa-envelope"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">Email</span>
+                <span class="cl-value">rutikp2134@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919130052134" class="contact-link glass">
+              <div class="cl-icon"><i class="fas fa-phone"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">Phone</span>
+                <span class="cl-value">+91 9130052134</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/rutik-patil" target="_blank" rel="noopener" class="contact-link glass">
+              <div class="cl-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-value">linkedin.com/in/rutik-patil</span>
+              </div>
+            </a>
+            <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" class="contact-link glass">
+              <div class="cl-icon"><i class="fab fa-github"></i></div>
+              <div class="cl-text">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-value">github.com/rutikpatil</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal-right">
+          <form class="contact-form glass" id="contactForm" novalidate>
+            <h3 class="form-title">Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="Job opportunity / Collaboration" required />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about the role or project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>RBP<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">
+        Designed &amp; built by <strong>Rutik Bajirao Patil</strong> · Pune, India
+      </p>
+      <div class="footer-socials">
+        <a href="mailto:rutikp2134@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/rutik-patil" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="footer-tech">Built with HTML · CSS · JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
