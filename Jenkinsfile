@@ -21,7 +21,9 @@ pipeline {
                 bat '''
                     if not exist index.html exit /b 1
                     if not exist style.css exit /b 1
-                    findstr /C:"My First DevOps Project!" index.html
+                    if not exist script.js exit /b 1
+                    if not exist Resume.pdf exit /b 1
+                    findstr /C:"Java Full Stack Developer" index.html
                     if errorlevel 1 exit /b 1
                 '''
             }
