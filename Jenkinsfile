@@ -81,7 +81,7 @@ pipeline {
                 echo 'Stage 4: Checking website response'
 
                 bat '''
-                    curl.exe --fail --silent --show-error http://YOUR_EC2_PUBLIC_IP/ -o NUL
+                    curl.exe --fail --silent --show-error http://15.207.14.181/ -o NUL
                     if errorlevel 1 exit /b 1
                     echo Website responded successfully.
                 '''
