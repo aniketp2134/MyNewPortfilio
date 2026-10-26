@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="pAd4VZITfzopt1DcAgZtd7H2YHJXGKKLJSIaa6eRGCg" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rutik Bajirao Patil | Java Full Stack Developer</title>
-  <meta name="description" content="Java Full Stack Developer specializing in Spring Boot, ReactJS, and RESTful APIs." />
+  <title>Rutik Bajirao Patil | Full Stack & DevOps Engineer</title>
+  <meta name="description" content="Rutik Bajirao Patil — Java Full Stack & Cloud DevOps Engineer specializing in Spring Boot, React.js, Docker, CI/CD, and Oracle Cloud Infrastructure (OCI)." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -19,7 +18,7 @@
 </head>
 <body class="dark-theme">
 
-  <!-- ============ CURSOR ============ -->
+  <!-- ============ CUSTOM CURSOR ============ -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
@@ -27,17 +26,21 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>RBP<span class="logo-bracket">/&gt;</span>
+        <span class="logo-bracket">&lt;</span>RBP<span class="logo-slash">/</span><span class="logo-devops">ops</span><span class="logo-bracket">&gt;</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#architecture" class="nav-link">DevOps Pipeline</a></li>
+        <li><a href="#skills" class="nav-link">Tech Stack</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#certifications" class="nav-link">Credentials</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-right">
+        <a href="Resume.pdf" target="_blank" class="nav-resume-btn" title="Download ATS Resume">
+          <i class="fas fa-file-pdf"></i> <span>Resume</span>
+        </a>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <i class="fas fa-sun" id="themeIcon"></i>
         </button>
@@ -52,74 +55,143 @@
   <section class="hero" id="home">
     <div class="hero-grid-overlay"></div>
     <div class="hero-particles" id="heroParticles"></div>
+
     <div class="hero-content">
-      <div class="hero-tag reveal-up">
-        <span class="tag-dot"></span> Available for opportunities
+      <div class="hero-badges reveal-up">
+        <div class="hero-tag">
+          <span class="tag-dot"></span> Immediate Joiner · Full-Time Roles
+        </div>
+        <div class="hero-tag oci-tag">
+          <i class="fas fa-certificate"></i> OCI Certified DevOps Pro
+        </div>
       </div>
+
       <h1 class="hero-name reveal-up">
         Rutik<br /><span class="name-accent">Bajirao Patil</span>
       </h1>
+
       <div class="hero-title reveal-up">
-        <span class="title-static">Java Full Stack</span>
-        <span class="title-separator"> · </span>
-        <span class="typed-wrapper"><span id="typedText"></span><span class="typed-cursor">|</span></span>
+        <span class="title-static">Engineering</span>
+        <span class="title-separator"> // </span>
+        <span class="typed-wrapper"><span id="typedText"></span><span class="typed-cursor">_</span></span>
       </div>
+
       <p class="hero-summary reveal-up">
-        Building scalable full-stack systems with <em>Spring Boot</em>, <em>ReactJS</em> &amp; <em>MySQL</em> —
-        from RESTful APIs to containerized microservices.
+        Architecting production-ready full-stack applications and automated cloud deployments. I bridge 
+        <strong>Java Spring Boot</strong> &amp; <strong>React.js</strong> microservices with containerized 
+        <strong>Docker</strong> environments and <strong>CI/CD pipelines</strong> on <strong>Oracle Cloud (OCI)</strong>.
       </p>
+
       <div class="hero-cta reveal-up">
         <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-code-branch"></i> View Projects
+          <i class="fas fa-cubes"></i> Explore Systems
         </a>
-        <a href="Resume.pdf" class="btn btn-outline" id="downloadResume">
+        <a href="Resume.pdf" download="Rutik_Bajirao_Patil_Resume.pdf" class="btn btn-outline" id="downloadResume">
           <i class="fas fa-download"></i> Download Resume
         </a>
       </div>
+
       <div class="hero-stats reveal-up">
         <div class="stat-item">
+          <span class="stat-num">3x</span>
+          <span class="stat-label">Oracle Cloud Certified</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
           <span class="stat-num">4+</span>
-          <span class="stat-label">Projects</span>
+          <span class="stat-label">Production-Grade Apps</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num">5+</span>
-          <span class="stat-label">Certifications</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">2+</span>
-          <span class="stat-label">Internships</span>
+          <span class="stat-num">2</span>
+          <span class="stat-label">Tech Internships</span>
         </div>
       </div>
     </div>
+
+    <!-- Interactive Multi-Tab Code & DevOps Window -->
     <div class="hero-visual">
       <div class="code-window reveal-right">
         <div class="window-bar">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="window-title">RutikPatil.java</span>
+          <div class="window-dots">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <div class="window-tabs">
+            <button class="code-tab active" data-tab="java"><i class="fab fa-java"></i> Engineer.java</button>
+            <button class="code-tab" data-tab="docker"><i class="fab fa-docker"></i> Dockerfile</button>
+            <button class="code-tab" data-tab="cicd"><i class="fas fa-code-branch"></i> deploy-oci.yml</button>
+          </div>
         </div>
-        <pre class="code-block"><code><span class="c-keyword">public class</span> <span class="c-class">RutikPatil</span> {
 
-  <span class="c-keyword">private final</span> String role =
-    <span class="c-string">"Java Full Stack Dev"</span>;
+        <!-- Tab 1: Java Full Stack -->
+        <pre class="code-block active" id="tab-java"><code><span class="c-keyword">@RestController</span>
+<span class="c-keyword">@RequestMapping</span>(<span class="c-string">"/api/v1/engineer"</span>)
+<span class="c-keyword">public class</span> <span class="c-class">RutikPatilController</span> {
 
-  <span class="c-keyword">private</span> List&lt;String&gt; stack = List.of(
-    <span class="c-string">"Spring Boot"</span>,
-    <span class="c-string">"React.js"</span>,
-    <span class="c-string">"MySQL"</span>,
-    <span class="c-string">"Docker"</span>,
-    <span class="c-string">"Microservices"</span>
+  <span class="c-keyword">private final</span> List&lt;String&gt; fullStack = List.of(
+    <span class="c-string">"Java 17"</span>, <span class="c-string">"Spring Boot 3"</span>, <span class="c-string">"React.js"</span>,
+    <span class="c-string">"MySQL"</span>, <span class="c-string">"MongoDB"</span>, <span class="c-string">"REST / JWT"</span>
   );
 
-  <span class="c-keyword">public</span> String passion() {
-    <span class="c-keyword">return</span> <span class="c-string">"Build. Ship. Scale."</span>;
+  <span class="c-keyword">private final</span> List&lt;String&gt; devOpsCloud = List.of(
+    <span class="c-string">"Docker"</span>, <span class="c-string">"CI/CD Pipelines"</span>, <span class="c-string">"Linux"</span>,
+    <span class="c-string">"Oracle Cloud (OCI)"</span>, <span class="c-string">"Git Workflows"</span>
+  );
+
+  <span class="c-keyword">@GetMapping</span>(<span class="c-string">"/status"</span>)
+  <span class="c-keyword">public</span> ResponseEntity&lt;String&gt; getStatus() {
+    <span class="c-keyword">return</span> ResponseEntity.ok(<span class="c-string">"READY_TO_SHIP_AND_SCALE"</span>);
   }
 }</code></pre>
+
+        <!-- Tab 2: Dockerfile -->
+        <pre class="code-block" id="tab-docker"><code><span class="c-comment"># Multi-stage Production Build for Spring Boot + React</span>
+<span class="c-keyword">FROM</span> maven:3.9.6-eclipse-temurin-17 <span class="c-keyword">AS</span> build
+<span class="c-keyword">WORKDIR</span> /workspace/app
+<span class="c-keyword">COPY</span> pom.xml .
+<span class="c-keyword">COPY</span> src ./src
+<span class="c-keyword">RUN</span> mvn clean package -DskipTests
+
+<span class="c-keyword">FROM</span> eclipse-temurin:17-jre-alpine
+<span class="c-keyword">WORKDIR</span> /app
+<span class="c-keyword"> RUN</span> addgroup -S spring &amp;&amp; adduser -S spring -G spring
+<span class="c-keyword">USER</span> spring:spring
+<span class="c-keyword">COPY</span> --from=build /workspace/app/target/*.jar app.jar
+<span class="c-keyword">EXPOSE</span> 8080
+<span class="c-keyword">HEALTHCHECK</span> --interval=30s --timeout=3s \
+  <span class="c-keyword">CMD</span> wget -q --spider http://localhost:8080/actuator/health || exit 1
+<span class="c-keyword">ENTRYPOINT</span> [<span class="c-string">"java"</span>, <span class="c-string">"-jar"</span>, <span class="c-string">"app.jar"</span>]</code></pre>
+
+        <!-- Tab 3: CI/CD YAML -->
+        <pre class="code-block" id="tab-cicd"><code><span class="c-keyword">name:</span> <span class="c-string">FullStack CI/CD — OCI Container Pipeline</span>
+<span class="c-keyword">on:</span>
+  <span class="c-keyword">push:</span>
+    <span class="c-keyword">branches:</span> [ <span class="c-string">"main"</span> ]
+
+<span class="c-keyword">jobs:</span>
+  <span class="c-keyword">build-test-deploy:</span>
+    <span class="c-keyword">runs-on:</span> ubuntu-latest
+    <span class="c-keyword">steps:</span>
+      - <span class="c-keyword">uses:</span> actions/checkout@v4
+      - <span class="c-keyword">name:</span> <span class="c-string">Set up JDK 17 &amp; Run JUnit Suite</span>
+        <span class="c-keyword">run:</span> mvn B test --file pom.xml
+      - <span class="c-keyword">name:</span> <span class="c-string">Build &amp; Push Docker Image to OCIR</span>
+        <span class="c-keyword">run:</span> |
+          docker build -t ocir.io/rbp/ems-service:${{ github.sha }} .
+          docker push ocir.io/rbp/ems-service:${{ github.sha }}
+      - <span class="c-keyword">name:</span> <span class="c-string">Trigger Zero-Downtime Rollout</span>
+        <span class="c-keyword">run:</span> oci devops deploy --pipeline-id $OCI_PIPELINE_ID</code></pre>
+
+        <div class="window-status-bar">
+          <span><i class="fas fa-check-circle"></i> Build: Passing</span>
+          <span><i class="fab fa-docker"></i> Container: Healthy</span>
+          <span>UTF-8 · Java 17</span>
+        </div>
       </div>
     </div>
+
     <div class="scroll-indicator">
-      <span>Scroll</span>
+      <span>Explore Architecture</span>
       <div class="scroll-line"></div>
     </div>
   </section>
@@ -128,22 +200,19 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">01 / About</span>
-        <h2 class="section-title">Who I Am</h2>
+        <span class="section-tag">01 / Engineering Profile</span>
+        <h2 class="section-title">Full Stack Speed. DevOps Reliability.</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal-left">
           <p class="about-lead">
-            Computer Engineering graduate with a strong foundation in enterprise Java and modern full-stack development.
+            Computer Engineering graduate (2025) from PVG's College of Engineering &amp; Technology, Pune, combining strong enterprise backend architecture with cloud-native DevOps practices.
           </p>
           <p class="about-body">
-            I specialize in building production-grade applications using <strong>Java 8/11/17</strong>, <strong>Spring Boot</strong>,
-            and <strong>ReactJS</strong>. My experience spans RESTful API design, JWT authentication, database modeling with MySQL/MongoDB,
-            and containerization with Docker.
+            Most developers stop once their code works on `localhost`. I focus on the complete software lifecycle—writing clean, modular <strong>Java (8/11/17) &amp; Spring Boot</strong> RESTful microservices, pairing them with reactive <strong>React.js</strong> frontends, and packaging everything into reproducible <strong>Docker</strong> containers.
           </p>
           <p class="about-body">
-            Passionate about clean architecture, scalable microservices, and bridging the gap between backend logic and
-            intuitive frontend experiences.
+            Backed by hands-on internship experience at <strong>Profound Edutech</strong> and validated as an <strong>Oracle Cloud Infrastructure (OCI) Certified DevOps Professional</strong>, I bring immediate value to engineering teams building high-availability web systems.
           </p>
           <div class="about-highlights">
             <div class="highlight-item">
@@ -152,39 +221,95 @@
             </div>
             <div class="highlight-item">
               <i class="fas fa-graduation-cap"></i>
-              <span>Computer Engineering Graduate</span>
+              <span>B.E. Computer Engineering (CGPA: 7.2/10)</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-briefcase"></i>
-              <span>Open to Full-Time Roles</span>
+              <i class="fas fa-shield-alt"></i>
+              <span>JWT Security &amp; RBAC Architecture</span>
             </div>
             <div class="highlight-item">
-              <i class="fas fa-code"></i>
-              <span>Java · Spring Boot · React · Docker</span>
+              <i class="fas fa-cloud-upload-alt"></i>
+              <span>OCI DevOps &amp; Container Pipelines</span>
             </div>
           </div>
         </div>
+
         <div class="about-cards reveal-right">
           <div class="about-card glass">
-            <i class="fas fa-server card-icon"></i>
-            <h3>Backend Expertise</h3>
-            <p>Spring Boot, REST APIs, JWT, Hibernate, Microservices architecture with JPA/ORM.</p>
+            <div class="card-top">
+              <i class="fas fa-server card-icon"></i>
+              <span class="card-metric">REST &amp; JPA</span>
+            </div>
+            <h3>Enterprise Backend</h3>
+            <p>Spring Boot, Spring MVC, Hibernate ORM, stateless JWT security, and optimized MySQL/MongoDB schema design.</p>
           </div>
           <div class="about-card glass">
-            <i class="fas fa-laptop-code card-icon"></i>
-            <h3>Frontend Skills</h3>
-            <p>React.js, JavaScript ES6+, HTML5/CSS3 — building responsive, accessible UIs.</p>
+            <div class="card-top">
+              <i class="fas fa-infinity card-icon"></i>
+              <span class="card-metric">CI/CD &amp; Cloud</span>
+            </div>
+            <h3>DevOps &amp; OCI Cloud</h3>
+            <p>Multi-stage Docker builds, automated CI/CD release pipelines, Linux shell workflows, and Oracle Cloud Infrastructure.</p>
           </div>
           <div class="about-card glass">
-            <i class="fas fa-cloud card-icon"></i>
-            <h3>DevOps & Cloud</h3>
-            <p>Docker containers, CI/CD pipelines, Git workflows, Linux environment, Oracle Cloud.</p>
+            <div class="card-top">
+              <i class="fas fa-laptop-code card-icon"></i>
+              <span class="card-metric">SPA &amp; UI</span>
+            </div>
+            <h3>Modern Frontend</h3>
+            <p>Component-driven React.js interfaces, asynchronous API integration, state management, and responsive CSS3 layouts.</p>
           </div>
           <div class="about-card glass">
-            <i class="fas fa-brain card-icon"></i>
-            <h3>AI / ML Exposure</h3>
-            <p>Face recognition, object detection with OpenCV & TensorFlow, model optimization.</p>
+            <div class="card-top">
+              <i class="fas fa-microchip card-icon"></i>
+              <span class="card-metric">Applied AI</span>
+            </div>
+            <h3>AI &amp; Computer Vision</h3>
+            <p>Integrating Python, OpenCV, TensorFlow, and Speech-to-Text AI pipelines into containerized web microservices.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTERACTIVE DEVOPS & FULLSTACK PIPELINE ============ -->
+  <section class="section pipeline-section" id="architecture">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 / How I Ship Code</span>
+        <h2 class="section-title">Interactive Delivery Pipeline</h2>
+        <p class="section-subtitle">Click any stage below to inspect how I architect, test, containerize, and deploy full-stack systems.</p>
+      </div>
+
+      <div class="pipeline-container glass reveal-up">
+        <div class="pipeline-nodes">
+          <button class="pipeline-node active" data-stage="code">
+            <div class="node-icon"><i class="fab fa-git-alt"></i></div>
+            <span class="node-step">Stage 01</span>
+            <span class="node-title">Code &amp; Git Flow</span>
+          </button>
+          <div class="pipeline-connector"></div>
+          <button class="pipeline-node" data-stage="build">
+            <div class="node-icon"><i class="fas fa-cogs"></i></div>
+            <span class="node-step">Stage 02</span>
+            <span class="node-title">API &amp; Build</span>
+          </button>
+          <div class="pipeline-connector"></div>
+          <button class="pipeline-node" data-stage="docker">
+            <div class="node-icon"><i class="fab fa-docker"></i></div>
+            <span class="node-step">Stage 03</span>
+            <span class="node-title">Containerize</span>
+          </button>
+          <div class="pipeline-connector"></div>
+          <button class="pipeline-node" data-stage="cloud">
+            <div class="node-icon"><i class="fas fa-cloud"></i></div>
+            <span class="node-step">Stage 04</span>
+            <span class="node-title">OCI Cloud Deploy</span>
+          </button>
+        </div>
+
+        <div class="pipeline-details" id="pipelineDetails">
+          <!-- Populated dynamically via script.js -->
         </div>
       </div>
     </div>
@@ -194,101 +319,62 @@
   <section class="section skills" id="skills">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">02 / Skills</span>
-        <h2 class="section-title">Technical Arsenal</h2>
+        <span class="section-tag">03 / Technical Arsenal</span>
+        <h2 class="section-title">Stack &amp; Tooling</h2>
       </div>
       <div class="skills-wrapper">
 
         <div class="skill-category reveal-up">
-          <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+          <h3 class="category-title"><i class="fas fa-server"></i> Backend Engineering</h3>
           <div class="skill-tags">
-            <span class="skill-tag tier-1">Java 8/11/17</span>
-            <span class="skill-tag tier-1">JavaScript</span>
-            <span class="skill-tag tier-2">Python</span>
-            <span class="skill-tag tier-2">C++</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal-up">
-          <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
-          <div class="skill-tags">
+            <span class="skill-tag tier-1">Java 8 / 11 / 17</span>
             <span class="skill-tag tier-1">Spring Boot</span>
             <span class="skill-tag tier-1">Spring MVC</span>
-            <span class="skill-tag tier-1">Hibernate</span>
-            <span class="skill-tag tier-2">J2EE</span>
-            <span class="skill-tag tier-2">Servlets</span>
-            <span class="skill-tag tier-2">JSP</span>
+            <span class="skill-tag tier-1">Hibernate / JPA</span>
+            <span class="skill-tag tier-1">RESTful APIs</span>
+            <span class="skill-tag tier-1">JWT Security</span>
+            <span class="skill-tag tier-2">Microservices</span>
+            <span class="skill-tag tier-2">Servlets &amp; JSP</span>
           </div>
         </div>
 
         <div class="skill-category reveal-up">
-          <h3 class="category-title"><i class="fas fa-palette"></i> Frontend</h3>
+          <h3 class="category-title"><i class="fab fa-docker"></i> DevOps &amp; Cloud (OCI)</h3>
+          <div class="skill-tags">
+            <span class="skill-tag tier-1">Docker &amp; Compose</span>
+            <span class="skill-tag tier-1">CI/CD Pipelines</span>
+            <span class="skill-tag tier-1">Oracle Cloud (OCI)</span>
+            <span class="skill-tag tier-1">Git &amp; GitHub Actions</span>
+            <span class="skill-tag tier-1">Linux / Bash</span>
+            <span class="skill-tag tier-2">Maven</span>
+            <span class="skill-tag tier-2">Postman API Testing</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="category-title"><i class="fas fa-laptop-code"></i> Frontend &amp; UI</h3>
           <div class="skill-tags">
             <span class="skill-tag tier-1">React.js</span>
-            <span class="skill-tag tier-1">HTML5</span>
-            <span class="skill-tag tier-1">CSS3</span>
-            <span class="skill-tag tier-2">JSF</span>
+            <span class="skill-tag tier-1">JavaScript (ES6+)</span>
+            <span class="skill-tag tier-1">HTML5 &amp; CSS3</span>
+            <span class="skill-tag tier-2">Bootstrap</span>
+            <span class="skill-tag tier-2">DOM Manipulation</span>
+            <span class="skill-tag tier-2">Responsive Design</span>
           </div>
         </div>
 
         <div class="skill-category reveal-up">
-          <h3 class="category-title"><i class="fas fa-database"></i> Databases</h3>
+          <h3 class="category-title"><i class="fas fa-database"></i> Databases &amp; AI/ML</h3>
           <div class="skill-tags">
-            <span class="skill-tag tier-1">MySQL</span>
-            <span class="skill-tag tier-2">MongoDB</span>
+            <span class="skill-tag tier-1">MySQL (Relational)</span>
+            <span class="skill-tag tier-1">MongoDB (NoSQL)</span>
+            <span class="skill-tag tier-1">SQL Query Optimization</span>
+            <span class="skill-tag tier-2">Python</span>
+            <span class="skill-tag tier-2">OpenCV</span>
+            <span class="skill-tag tier-2">TensorFlow</span>
           </div>
         </div>
 
-        <div class="skill-category reveal-up">
-          <h3 class="category-title"><i class="fab fa-docker"></i> DevOps & Cloud</h3>
-          <div class="skill-tags">
-            <span class="skill-tag tier-1">Docker</span>
-            <span class="skill-tag tier-1">Git / GitHub</span>
-            <span class="skill-tag tier-2">CI/CD</span>
-            <span class="skill-tag tier-2">Linux</span>
-            <span class="skill-tag tier-2">Cloud Basics</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal-up">
-          <h3 class="category-title"><i class="fas fa-lightbulb"></i> Concepts</h3>
-          <div class="skill-tags">
-            <span class="skill-tag tier-1">REST APIs</span>
-            <span class="skill-tag tier-1">Microservices</span>
-            <span class="skill-tag tier-1">OOP</span>
-            <span class="skill-tag tier-2">Agile Scrum</span>
-            <span class="skill-tag tier-2">Multithreading</span>
-            <span class="skill-tag tier-2">Collections</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Proficiency bars -->
-      <div class="proficiency-bars reveal-up">
-        <h3 class="prof-title">Core Proficiency</h3>
-        <div class="bar-list">
-          <div class="bar-item">
-            <div class="bar-meta"><span>Java (Spring Boot)</span><span>90%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-meta"><span>React.js / JavaScript</span><span>78%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="78"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-meta"><span>MySQL / Hibernate</span><span>82%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-meta"><span>Docker / DevOps</span><span>65%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="65"></div></div>
-          </div>
-          <div class="bar-item">
-            <div class="bar-meta"><span>Python / AI/ML</span><span>60%</span></div>
-            <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -297,8 +383,8 @@
   <section class="section experience" id="experience">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">03 / Experience</span>
-        <h2 class="section-title">Work History</h2>
+        <span class="section-tag">04 / Experience</span>
+        <h2 class="section-title">Production Track Record</h2>
       </div>
       <div class="timeline">
 
@@ -313,18 +399,16 @@
                 <h3 class="tl-role">Java Full Stack Developer Intern</h3>
                 <p class="tl-company"><i class="fas fa-building"></i> Profound Edutech Pvt. Ltd., Pune</p>
               </div>
-              <span class="tl-period">Aug 2025 – Present</span>
+              <span class="tl-period">Aug 2025 – Feb 2026</span>
             </div>
-            <div class="tl-badge current">Current</div>
             <ul class="tl-points">
-              <li>Developed full-stack applications using Java, Spring Boot, ReactJS &amp; MySQL</li>
-              <li>Built RESTful APIs for CRUD operations consumed by the React frontend</li>
-              <li>Implemented JWT-based authentication for secure API access</li>
-              <li>Integrated frontend and backend modules into a cohesive release pipeline</li>
-              <li>Managed codebase via Git/GitHub; tested APIs using Postman</li>
+              <li>Architected and deployed full-stack web applications using <strong>Java 17, Spring Boot, React.js, and MySQL</strong>.</li>
+              <li>Designed stateless <strong>RESTful APIs</strong> with Spring MVC and Hibernate ORM for high-throughput CRUD workflows.</li>
+              <li>Engineered role-based access control (RBAC) and stateless authentication filters using <strong>JSON Web Tokens (JWT)</strong>.</li>
+              <li>Streamlined frontend-to-backend integration in agile release cycles, validating endpoint contracts via <strong>Postman</strong> and managing branches with <strong>Git/GitHub</strong>.</li>
             </ul>
             <div class="tl-tech">
-              <span>Java</span><span>Spring Boot</span><span>ReactJS</span><span>MySQL</span><span>JWT</span><span>Git</span>
+              <span>Java 17</span><span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>Hibernate</span><span>JWT</span><span>Git</span><span>Postman</span>
             </div>
           </div>
         </div>
@@ -338,17 +422,17 @@
             <div class="tl-header">
               <div>
                 <h3 class="tl-role">Artificial Intelligence Intern</h3>
-                <p class="tl-company"><i class="fas fa-building"></i> AI Research Internship</p>
+                <p class="tl-company"><i class="fas fa-microchip"></i> Computer Vision &amp; ML Internship</p>
               </div>
               <span class="tl-period">Feb 2024 – Apr 2024</span>
             </div>
             <ul class="tl-points">
-              <li>Built face recognition and object detection pipelines using OpenCV &amp; TensorFlow</li>
-              <li>Improved model accuracy through advanced image preprocessing techniques</li>
-              <li>Documented model performance benchmarks and presented findings</li>
+              <li>Engineered real-time computer vision pipelines for face recognition and multi-object detection using <strong>Python, OpenCV, and TensorFlow</strong>.</li>
+              <li>Boosted inference accuracy and reduced false positives by implementing automated image normalization and feature extraction workflows on Linux environments.</li>
+              <li>Benchmarked model latency and documented deployment specifications for downstream integration.</li>
             </ul>
             <div class="tl-tech">
-              <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>ML</span>
+              <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>Linux</span><span>Model Optimization</span>
             </div>
           </div>
         </div>
@@ -361,105 +445,133 @@
   <section class="section projects" id="projects">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">04 / Projects</span>
-        <h2 class="section-title">What I've Built</h2>
+        <span class="section-tag">05 / Featured Systems</span>
+        <h2 class="section-title">What I've Built &amp; Containerized</h2>
       </div>
 
       <!-- Filter buttons -->
       <div class="filter-bar reveal-up">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        <button class="filter-btn" data-filter="ai">AI / ML</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn active" data-filter="all">All Systems</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack (Spring + React)</button>
+        <button class="filter-btn" data-filter="devops">Docker &amp; DevOps</button>
+        <button class="filter-btn" data-filter="ai">AI / Computer Vision</button>
       </div>
 
       <div class="projects-grid">
 
-        <div class="project-card glass reveal-up" data-category="fullstack">
+        <!-- Project 1 -->
+        <div class="project-card glass reveal-up" data-category="fullstack devops">
           <div class="project-top">
             <div class="project-icon"><i class="fas fa-users-cog"></i></div>
-            <div class="project-links">
-              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            <div class="project-badges">
+              <span class="p-badge">Full Stack + JWT</span>
             </div>
           </div>
           <h3 class="project-title">Smart Employee Management System</h3>
           <p class="project-desc">
-            Full-stack HRMS featuring employee CRUD, department management, role-based access control with JWT,
-            and a clean React dashboard backed by a Spring Boot REST API.
+            Enterprise HRMS platform featuring complete employee lifecycle CRUD, department hierarchies, stateless JWT authentication, and optimized relational queries backed by Spring Boot and React.js.
           </p>
           <div class="project-tech">
-            <span>Java</span><span>Spring Boot</span><span>ReactJS</span><span>MySQL</span><span>JWT</span>
+            <span>Java 17</span><span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>Hibernate</span><span>JWT</span>
           </div>
           <div class="project-highlights">
-            <span><i class="fas fa-check-circle"></i> CRUD REST APIs</span>
-            <span><i class="fas fa-check-circle"></i> JWT Auth</span>
-            <span><i class="fas fa-check-circle"></i> Responsive UI</span>
+            <span><i class="fas fa-lock"></i> RBAC &amp; JWT Security</span>
+            <span><i class="fas fa-database"></i> Normalized MySQL Schema</span>
           </div>
-        </div>
-
-        <div class="project-card glass reveal-up" data-category="fullstack ai">
-          <div class="project-top">
-            <div class="project-icon"><i class="fas fa-microphone-alt"></i></div>
+          <div class="project-actions">
+            <button class="btn-arch" data-project="ems">
+              <i class="fas fa-project-diagram"></i> System Architecture
+            </button>
             <div class="project-links">
-              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" class="icon-btn" title="View Source on GitHub"><i class="fab fa-github"></i></a>
             </div>
           </div>
-          <h3 class="project-title">AI Voice Chatbot</h3>
-          <p class="project-desc">
-            Conversational AI chatbot with voice-to-text input and text-to-speech output, integrated via REST APIs,
-            and containerized with Docker for seamless deployment.
-          </p>
-          <div class="project-tech">
-            <span>REST API</span><span>Voice-to-Text</span><span>Docker</span><span>TTS</span>
-          </div>
-          <div class="project-highlights">
-            <span><i class="fas fa-check-circle"></i> Docker Deploy</span>
-            <span><i class="fas fa-check-circle"></i> Voice I/O</span>
-          </div>
         </div>
 
-        <div class="project-card glass reveal-up" data-category="frontend">
+        <!-- Project 2 -->
+        <div class="project-card glass reveal-up" data-category="fullstack devops ai">
           <div class="project-top">
-            <div class="project-icon"><i class="fas fa-tasks"></i></div>
-            <div class="project-links">
-              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            <div class="project-icon"><i class="fab fa-docker"></i></div>
+            <div class="project-badges">
+              <span class="p-badge devops">Dockerized Microservice</span>
             </div>
           </div>
-          <h3 class="project-title">To-Do List Web Application</h3>
+          <h3 class="project-title">Containerized AI Voice Chatbot</h3>
           <p class="project-desc">
-            Dynamic task manager with real-time CRUD, priority flags, due-date tracking, and a fluid UI built
-            with vanilla JavaScript and REST API integration.
+            Low-latency conversational AI web application supporting bi-directional Voice-to-Text (ASR) and Text-to-Speech (TTS) synthesis via REST APIs, packaged inside a portable Docker image for zero-config cloud deployment.
           </p>
           <div class="project-tech">
-            <span>JavaScript</span><span>HTML/CSS</span><span>REST API</span>
+            <span>Docker</span><span>React.js</span><span>REST APIs</span><span>Voice-to-Text</span><span>TTS Engine</span>
           </div>
           <div class="project-highlights">
-            <span><i class="fas fa-check-circle"></i> Dynamic UI</span>
-            <span><i class="fas fa-check-circle"></i> REST Integration</span>
+            <span><i class="fab fa-docker"></i> Multi-Stage Docker Build</span>
+            <span><i class="fas fa-bolt"></i> Real-Time Audio Stream</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn-arch" data-project="chatbot">
+              <i class="fas fa-project-diagram"></i> System Architecture
+            </button>
+            <div class="project-links">
+              <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" class="icon-btn" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
           </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="project-card glass reveal-up" data-category="ai">
           <div class="project-top">
-            <div class="project-icon"><i class="fas fa-camera"></i></div>
-            <div class="project-links">
-              <a href="#" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+            <div class="project-icon"><i class="fas fa-user-shield"></i></div>
+            <div class="project-badges">
+              <span class="p-badge">Biometric CV</span>
             </div>
           </div>
-          <h3 class="project-title">Face Verification System</h3>
+          <h3 class="project-title">Real-Time Face Verification System</h3>
           <p class="project-desc">
-            Real-time face verification pipeline using OpenCV for detection and TensorFlow for identity verification,
-            with preprocessing to maximize model accuracy.
+            Biometric authentication pipeline built with OpenCV and TensorFlow. Uses automated histogram equalization, facial landmark alignment, and deep embeddings for high-precision identity verification.
           </p>
           <div class="project-tech">
-            <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>Image Processing</span>
+            <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>Image Preprocessing</span>
           </div>
           <div class="project-highlights">
-            <span><i class="fas fa-check-circle"></i> Real-time Detection</span>
-            <span><i class="fas fa-check-circle"></i> High Accuracy</span>
+            <span><i class="fas fa-tachometer-alt"></i> Sub-second Inference</span>
+            <span><i class="fas fa-check-double"></i> High Precision Pipeline</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn-arch" data-project="face">
+              <i class="fas fa-project-diagram"></i> System Architecture
+            </button>
+            <div class="project-links">
+              <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" class="icon-btn" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass reveal-up" data-category="fullstack">
+          <div class="project-top">
+            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+            <div class="project-badges">
+              <span class="p-badge">REST + Async UI</span>
+            </div>
+          </div>
+          <h3 class="project-title">Dynamic Task &amp; Workflow Manager</h3>
+          <p class="project-desc">
+            Asynchronous task management web application featuring RESTful CRUD persistence, priority filtering, state synchronization with LocalStorage fallback, and a responsive interface.
+          </p>
+          <div class="project-tech">
+            <span>JavaScript (ES6+)</span><span>REST API</span><span>HTML5 / CSS3</span><span>LocalStorage</span>
+          </div>
+          <div class="project-highlights">
+            <span><i class="fas fa-sync"></i> Optimistic UI Updates</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile-First Layout</span>
+          </div>
+          <div class="project-actions">
+            <button class="btn-arch" data-project="todo">
+              <i class="fas fa-project-diagram"></i> System Architecture
+            </button>
+            <div class="project-links">
+              <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" class="icon-btn" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
           </div>
         </div>
 
@@ -467,58 +579,80 @@
     </div>
   </section>
 
-  <!-- ============ CERTIFICATIONS ============ -->
+  <!-- ============ ARCHITECTURE MODAL ============ -->
+  <div class="arch-modal-overlay" id="archModal">
+    <div class="arch-modal glass">
+      <div class="arch-modal-header">
+        <h3 id="modalTitle">System Architecture</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="arch-modal-body" id="modalBody">
+        <!-- Populated dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CERTIFICATIONS & EDUCATION ============ -->
   <section class="section certifications" id="certifications">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">05 / Certifications</span>
-        <h2 class="section-title">Credentials</h2>
+        <span class="section-tag">06 / Verified Credentials</span>
+        <h2 class="section-title">Certifications &amp; Education</h2>
       </div>
       <div class="certs-grid">
 
-        <div class="cert-card glass reveal-up">
+        <div class="cert-card glass reveal-up featured-cert">
+          <div class="cert-icon"><i class="fas fa-infinity"></i></div>
+          <div class="cert-body">
+            <h3>Oracle Cloud Infrastructure 2025 DevOps Professional</h3>
+            <p>Certified expertise in OCI CI/CD build/deployment pipelines, Docker container instances, Kubernetes (OKE), and infrastructure automation.</p>
+          </div>
+          <div class="cert-badge oracle">Oracle Certified</div>
+        </div>
+
+        <div class="cert-card glass reveal-up featured-cert">
           <div class="cert-icon"><i class="fas fa-layer-group"></i></div>
           <div class="cert-body">
             <h3>Master Diploma in Java Full Stack Development</h3>
-            <p>Comprehensive coverage of Java EE, Spring ecosystem, ReactJS, and DevOps fundamentals.</p>
+            <p>Profound Edutech — Comprehensive mastery of Core/Advanced Java, J2EE, Spring Boot, Hibernate, React.js, and relational database design.</p>
           </div>
-          <div class="cert-badge">Diploma</div>
+          <div class="cert-badge">Master Diploma</div>
         </div>
 
         <div class="cert-card glass reveal-up">
-          <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+          <div class="cert-icon"><i class="fas fa-chart-network"></i></div>
           <div class="cert-body">
-            <h3>Oracle Cloud Infrastructure 2025</h3>
-            <p>DevOps Professional — CI/CD, container orchestration, and cloud infrastructure automation.</p>
+            <h3>Oracle Cloud Infrastructure 2025 Data Science Professional</h3>
+            <p>End-to-end machine learning lifecycle, model catalog deployment, and scalable data engineering workflows on OCI.</p>
           </div>
-          <div class="cert-badge oracle">Oracle</div>
+          <div class="cert-badge oracle">Oracle Certified</div>
         </div>
 
         <div class="cert-card glass reveal-up">
-          <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="cert-body">
-            <h3>Oracle Cloud Infrastructure 2025</h3>
-            <p>Data Science Professional — ML workflows, model deployment, and data engineering on OCI.</p>
-          </div>
-          <div class="cert-badge oracle">Oracle</div>
-        </div>
-
-        <div class="cert-card glass reveal-up">
-          <div class="cert-icon"><i class="fas fa-robot"></i></div>
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
           <div class="cert-body">
             <h3>Oracle AI Foundations Associate</h3>
-            <p>Fundamentals of AI/ML on Oracle Cloud — LLMs, generative AI, and responsible AI principles.</p>
+            <p>Foundational architecture of deep learning, Large Language Models (LLMs), generative AI, and cloud AI services.</p>
           </div>
-          <div class="cert-badge oracle">Oracle</div>
+          <div class="cert-badge oracle">Oracle Certified</div>
         </div>
 
         <div class="cert-card glass reveal-up">
           <div class="cert-icon"><i class="fab fa-git-alt"></i></div>
           <div class="cert-body">
             <h3>Git &amp; GitHub Masterclass</h3>
-            <p>Advanced version control, branching strategies, pull requests, and collaborative workflows.</p>
+            <p>Production branching strategies, rebase workflows, pull request code reviews, and collaborative release management.</p>
           </div>
-          <div class="cert-badge">Masterclass</div>
+          <div class="cert-badge">Credential</div>
+        </div>
+
+        <div class="cert-card glass reveal-up">
+          <div class="cert-icon"><i class="fas fa-university"></i></div>
+          <div class="cert-body">
+            <h3>B.E. in Computer Engineering (2025)</h3>
+            <p>PVG's College of Engineering &amp; Technology, Pune · CGPA: 7.20 / 10 · HSC (2021): 77.20%.</p>
+          </div>
+          <div class="cert-badge">Degree</div>
         </div>
 
       </div>
@@ -529,37 +663,43 @@
   <section class="section contact" id="contact">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="section-tag">06 / Contact</span>
-        <h2 class="section-title">Get In Touch</h2>
+        <span class="section-tag">07 / Initiate Connection</span>
+        <h2 class="section-title">Hire a Full Stack + DevOps Engineer</h2>
       </div>
       <div class="contact-wrapper">
 
         <div class="contact-info reveal-left">
           <p class="contact-intro">
-            I'm actively looking for full-time Java Full Stack Developer roles. Feel free to reach out — I respond promptly!
+            Looking for an engineer who can write clean <strong>Spring Boot &amp; React</strong> code <em>and</em> containerize it for cloud deployment? Let's talk. Available for immediate joining in Pune or remote/hybrid roles across India.
           </p>
           <div class="contact-links">
-            <a href="mailto:rutikp2134@gmail.com" class="contact-link glass">
+            <div class="contact-link glass">
               <div class="cl-icon"><i class="fas fa-envelope"></i></div>
               <div class="cl-text">
-                <span class="cl-label">Email</span>
-                <span class="cl-value">rutikp2134@gmail.com</span>
+                <span class="cl-label">Direct Email</span>
+                <a href="mailto:rutikp2134@gmail.com" class="cl-value">rutikp2134@gmail.com</a>
               </div>
-            </a>
+              <button class="copy-btn" id="copyEmailBtn" title="Copy Email Address">
+                <i class="far fa-copy"></i> <span id="copyBtnText">Copy</span>
+              </button>
+            </div>
+
             <a href="tel:+919130052134" class="contact-link glass">
               <div class="cl-icon"><i class="fas fa-phone"></i></div>
               <div class="cl-text">
-                <span class="cl-label">Phone</span>
+                <span class="cl-label">Phone / WhatsApp</span>
                 <span class="cl-value">+91 9130052134</span>
               </div>
             </a>
-            <a href="https://linkedin.com/in/rutik-patil" target="_blank" rel="noopener" class="contact-link glass">
+
+            <a href="https://www.linkedin.com/in/rutik-patil-290818340" target="_blank" rel="noopener" class="contact-link glass">
               <div class="cl-icon"><i class="fab fa-linkedin-in"></i></div>
               <div class="cl-text">
                 <span class="cl-label">LinkedIn</span>
                 <span class="cl-value">linkedin.com/in/rutik-patil</span>
               </div>
             </a>
+
             <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" class="contact-link glass">
               <div class="cl-icon"><i class="fab fa-github"></i></div>
               <div class="cl-text">
@@ -572,27 +712,27 @@
 
         <div class="contact-form-wrapper reveal-right">
           <form class="contact-form glass" id="contactForm" novalidate>
-            <h3 class="form-title">Send a Message</h3>
+            <h3 class="form-title">Send a Direct Message</h3>
             <div class="form-row">
               <div class="form-group">
-                <label for="fname">Name</label>
-                <input type="text" id="fname" name="name" placeholder="Your full name" required />
+                <label for="fname">Your Name / Recruiter</label>
+                <input type="text" id="fname" name="name" placeholder="e.g. Priya Sharma" required />
               </div>
               <div class="form-group">
-                <label for="femail">Email</label>
-                <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+                <label for="femail">Work Email</label>
+                <input type="email" id="femail" name="email" placeholder="name@company.com" required />
               </div>
             </div>
             <div class="form-group">
-              <label for="fsubject">Subject</label>
-              <input type="text" id="fsubject" name="subject" placeholder="Job opportunity / Collaboration" required />
+              <label for="fsubject">Role / Opportunity</label>
+              <input type="text" id="fsubject" name="subject" placeholder="Full Stack / DevOps Engineer Role" required />
             </div>
             <div class="form-group">
-              <label for="fmessage">Message</label>
-              <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about the role or project..." required></textarea>
+              <label for="fmessage">Message Details</label>
+              <textarea id="fmessage" name="message" rows="4" placeholder="Hi Rutik, we came across your portfolio and would love to schedule an interview..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full">
-              <i class="fas fa-paper-plane"></i> Send Message
+              <i class="fas fa-paper-plane"></i> Open in Email Client &amp; Send
             </button>
             <p class="form-note" id="formNote"></p>
           </form>
@@ -606,17 +746,17 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">
-        <span class="logo-bracket">&lt;</span>RBP<span class="logo-bracket">/&gt;</span>
+        <span class="logo-bracket">&lt;</span>RBP<span class="logo-slash">/</span><span class="logo-devops">ops</span><span class="logo-bracket">&gt;</span>
       </div>
       <p class="footer-copy">
-        Designed &amp; built by <strong>Rutik Bajirao Patil</strong> · Pune, India
+        Architected &amp; engineered by <strong>Rutik Bajirao Patil</strong> · Pune, Maharashtra, India
       </p>
       <div class="footer-socials">
         <a href="mailto:rutikp2134@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/rutik-patil" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/rutikpatil" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rutik-patil-290818340" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/aniketp2134" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
       </div>
-      <p class="footer-tech">Built with HTML · CSS · JavaScript</p>
+      <p class="footer-tech">Java 17 · Spring Boot · React.js · Docker · OCI DevOps</p>
     </div>
   </footer>
 
