@@ -38,7 +38,7 @@ pipeline {
                     sshUserPrivateKey(
                         credentialsId: 'ec2-ssh-key',
                         keyFileVariable: 'SSH_KEY',
-                        usernameVariable: 'SSH_USER'
+                        usernameVariable: 'ubuntu'
                     )
                 ]) {
                     bat '''
@@ -57,17 +57,17 @@ pipeline {
 
                         echo Preparing deployment directory on EC2...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %SSH_USER%@13.203.202.39 "mkdir -p /tmp/MyPortfolioCICD"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %ubuntu%@13.203.202.39 "mkdir -p /tmp/MyPortfolioCICD"
                         if errorlevel 1 exit /b 1
 
                         echo Copying website files to EC2...
 
-                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css %SSH_USER%@13.203.202.39:/tmp/MyPortfolioCICD/
+                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css %ubuntu%@13.203.202.39:/tmp/MyPortfolioCICD/
                         if errorlevel 1 exit /b 1
 
                         echo Installing website files for Nginx...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@13.203.202.39 "sudo install -m 644 /tmp/MyPortfolioCICD/index.html /tmp/MyPortfolioCICD/style.css /tmp/MyPortfolioCICD/script.js /var/www/html/ && sudo nginx -t && sudo systemctl reload nginx"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %ubuntu%@13.203.202.39 "sudo install -m 644 /tmp/MyPortfolioCICD/index.html /tmp/MyPortfolioCICD/style.css /tmp/MyPortfolioCICD/script.js /var/www/html/ && sudo nginx -t && sudo systemctl reload nginx"
                         if errorlevel 1 exit /b 1
 
                         echo Deployment commands completed successfully.
