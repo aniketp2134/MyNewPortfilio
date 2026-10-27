@@ -57,17 +57,17 @@ pipeline {
 
                         echo Preparing deployment directory on EC2...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %SSH_USER%@13.203.202.39 "mkdir -p /tmp/devops-cicd"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %SSH_USER%@13.203.202.39 "mkdir -p /tmp/MyNewPortfilio"
                         if errorlevel 1 exit /b 1
 
                         echo Copying website files to EC2...
 
-                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css %SSH_USER%@13.203.202.39:/tmp/devops-cicd/
+                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css %SSH_USER%@13.203.202.39:/tmp/MyNewPortfilio/
                         if errorlevel 1 exit /b 1
 
                         echo Installing website files for Nginx...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@13.203.202.39 "sudo install -m 644 /tmp/devops-cicd/index.html /tmp/devops-cicd/style.css /var/www/html/ && sudo nginx -t && sudo systemctl reload nginx"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@13.203.202.39 "sudo install -m 644 /tmp/MyNewPortfilio/index.html /tmp/MyNewPortfilio/style.css /tmp/MyNewPortfilio/script.js /tmp/MyNewPortfilio/Resume.pdf /var/www/html/ && sudo nginx -t && sudo systemctl reload nginx"
                         if errorlevel 1 exit /b 1
 
                         echo Deployment commands completed successfully.
@@ -81,7 +81,7 @@ pipeline {
                 echo 'Stage 4: Checking website response'
 
                 bat '''
-                    curl.exe --fail --silent --show-error http://15.207.14.181/ -o NUL
+                    curl.exe --fail --silent --show-error http://13.203.202.39/ -o NUL
                     if errorlevel 1 exit /b 1
                     echo Website responded successfully.
                 '''
