@@ -68,7 +68,7 @@ pipeline {
 
                         echo Installing website files for Nginx...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@13.232.38.207"sudo install -m 644 /tmp/MyWebsiteCICD/index.html /tmp/MyWebsiteCICD/style.css /tmp/MyWebsiteCICD/script.js /var/www/html/ && sudo nginx -t && sudo systemctl reload nginx"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@13.232.38.207 "sudo install -m 644 /tmp/MyWebsiteCICD/index.html /tmp/MyWebsiteCICD/style.css /tmp/MyWebsiteCICD/script.js /var/www/html/ && sudo nginx -t && sudo systemctl reload nginx"
                         if errorlevel 1 exit /b 1
 
                         echo Deployment commands completed successfully.
