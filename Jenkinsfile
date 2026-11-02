@@ -82,7 +82,7 @@ pipeline {
                 echo 'Stage 4: Checking website response'
 
                 bat '''
-                    curl.exe --fail --silent --show-error https://13.232.38.207/ -o NUL
+                    curl.exe --fail --silent --show-error http://13.232.38.207/ -o NUL
                     if errorlevel 1 exit /b 1
 
                     echo Website responded successfully.
