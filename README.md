@@ -5,3 +5,4 @@ Testing corrected Jenkins webhook endpoint.
 Final test: GitHub webhook automatically triggers Jenkins.
 Testing Smee path forwarding to Jenkins.
 thank you
+GitHub webhook integration test.
