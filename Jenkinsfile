@@ -3,7 +3,7 @@ pipeline {
     agent any
 
         environment {
-        EC2_HOST = '13.232.38.207'
+        EC2_HOST = '15.252.164.229'
         WEBSITE_URL = 'http://13.232.38.207/'
         DEPLOY_DIR = '/tmp/MyWebsiteCICD'
         DEPLOY_DIR = '/var/www/html'
