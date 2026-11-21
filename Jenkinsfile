@@ -65,17 +65,17 @@ pipeline {
 
                         echo Preparing deployment directory on EC2...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %SSH_USER%@EC2_HOST "mkdir -p DEPLOY_DIR"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %SSH_USER%@EC2_HOST% "mkdir -p DEPLOY_DIR"
                         if errorlevel 1 exit /b 1
 
                         echo Copying website files to EC2...
 
-                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css script.js Resume.pdf %SSH_USER%@EC2_HOST:DEPLOY_DIR/
+                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css script.js Resume.pdf %SSH_USER%@EC2_HOST%:DEPLOY_DIR/
                         if errorlevel 1 exit /b 1
 
                         echo Installing website files for Nginx...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@EC2_HOST "sudo install -m 644 DEPLOY_DIR/index.html DEPLOY_DIR/style.css DEPLOY_DIR/script.js DEPLOY_DIR/Resume.pdf DEPLOY_DIR && sudo nginx -t && sudo systemctl reload nginx"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@EC2_HOST% "sudo install -m 644 DEPLOY_DIR/index.html DEPLOY_DIR/style.css DEPLOY_DIR/script.js DEPLOY_DIR/Resume.pdf DEPLOY_DIR && sudo nginx -t && sudo systemctl reload nginx"
                         if errorlevel 1 exit /b 1
 
                         echo Deployment commands completed successfully.
