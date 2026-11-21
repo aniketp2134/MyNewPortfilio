@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         EC2_HOST = '52.66.240.165'
-        WEBSITE_URL = 'http://52.66.240.165/'
+        WEBSITE_URL = 'https://52.66.240.165/'
         DEPLOY_DIR = '/tmp/MyWebsiteCICD'
         WEB_ROOT = '/var/www/html'
     }
@@ -88,7 +88,7 @@ pipeline {
 
         stage('Verify Deployment') {
             steps {
-                echo 'Stage 4: Checking HTTP website response'
+                echo 'Stage 4: Checking HTTPS website response'
 
                 bat '''
                     curl.exe --fail --silent --show-error "%WEBSITE_URL%" -o NUL
