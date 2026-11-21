@@ -96,4 +96,20 @@ pipeline {
             }
         }
     }
+
+        post {
+        success {
+            echo 'SUCCESS: Portfolio deployment completed successfully!'
+            echo 'Your website is available on AWS EC2.'
+        }
+
+        failure {
+            echo 'FAILURE: Portfolio CI/CD pipeline failed.'
+            echo 'Please check the Jenkins Console Output.'
+        }
+
+        always {
+            echo 'Pipeline execution finished.'
+        }
+    }
 }
