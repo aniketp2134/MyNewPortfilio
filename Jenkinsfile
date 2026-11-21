@@ -2,18 +2,20 @@
 pipeline {
     agent any
 
-        environment {
+    environment {
         EC2_HOST = '52.66.240.165'
         WEBSITE_URL = 'http://52.66.240.165/'
         DEPLOY_DIR = '/tmp/MyWebsiteCICD'
         WEB_ROOT = '/var/www/html'
     }
+
     options {
-    timestamps()
-    timeout(time: 15, unit: 'MINUTES')
+        timestamps()
+        timeout(time: 15, unit: 'MINUTES')
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 echo 'Stage 1: Retrieving website source code'
@@ -65,17 +67,17 @@ pipeline {
 
                         echo Preparing deployment directory on EC2...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new %SSH_USER%@EC2_HOST% "mkdir -p DEPLOY_DIR"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=accept-new "%SSH_USER%@%EC2_HOST%" "mkdir -p %DEPLOY_DIR%"
                         if errorlevel 1 exit /b 1
 
                         echo Copying website files to EC2...
 
-                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css script.js Resume.pdf %SSH_USER%@EC2_HOST%:DEPLOY_DIR/
+                        scp -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new index.html style.css script.js Resume.pdf "%SSH_USER%@%EC2_HOST%:%DEPLOY_DIR%/"
                         if errorlevel 1 exit /b 1
 
                         echo Installing website files for Nginx...
 
-                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new %SSH_USER%@EC2_HOST% "sudo install -m 644 DEPLOY_DIR/index.html DEPLOY_DIR/style.css DEPLOY_DIR/script.js DEPLOY_DIR/Resume.pdf DEPLOY_DIR && sudo nginx -t && sudo systemctl reload nginx"
+                        ssh -i "%SSH_KEY%" -o BatchMode=yes -o StrictHostKeyChecking=accept-new "%SSH_USER%@%EC2_HOST%" "sudo install -m 644 %DEPLOY_DIR%/index.html %WEB_ROOT%/index.html && sudo install -m 644 %DEPLOY_DIR%/style.css %WEB_ROOT%/style.css && sudo install -m 644 %DEPLOY_DIR%/script.js %WEB_ROOT%/script.js && sudo install -m 644 %DEPLOY_DIR%/Resume.pdf %WEB_ROOT%/Resume.pdf && sudo nginx -t && sudo systemctl reload nginx"
                         if errorlevel 1 exit /b 1
 
                         echo Deployment commands completed successfully.
@@ -86,7 +88,7 @@ pipeline {
 
         stage('Verify Deployment') {
             steps {
-                echo 'Stage 4: Checking website response'
+                echo 'Stage 4: Checking HTTP website response'
 
                 bat '''
                     curl.exe --fail --silent --show-error "%WEBSITE_URL%" -o NUL
@@ -98,7 +100,7 @@ pipeline {
         }
     }
 
-        post {
+    post {
         success {
             echo 'SUCCESS: Portfolio deployment completed successfully!'
             echo 'Your website is available on AWS EC2.'
