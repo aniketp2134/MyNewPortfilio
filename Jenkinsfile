@@ -9,7 +9,8 @@ pipeline {
         DEPLOY_DIR = '/var/www/html'
     }
     options {
-        timestamps()
+    timestamps()
+    timeout(time: 15, unit: 'MINUTES')
     }
 
     stages {
