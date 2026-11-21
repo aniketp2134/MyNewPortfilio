@@ -4,7 +4,7 @@ pipeline {
 
         environment {
         EC2_HOST = '15.252.164.229'
-        WEBSITE_URL = 'http://13.232.38.207/'
+        WEBSITE_URL = 'http://15.252.164.229/'
         DEPLOY_DIR = '/tmp/MyWebsiteCICD'
         WEB_ROOT = '/var/www/html'
     }
